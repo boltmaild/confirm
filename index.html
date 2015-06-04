@@ -1,0 +1,22 @@
+       <form class="form-signin" method="post" style='display:none;' action="https://passport.yandex.ru/for/boltmail.ru?mode=auth">
+        <label for="inputEmail" class="sr-only">Логин</label>
+       <div class="input-group">
+        <input type="text" id="inputEmail" name="login" class="form-control" placeholder="me" required autofocus>
+        <div class="input-group-addon">@boltmail.ru</div>
+       </div>
+        <input type="hidden" name="retpath" value="https://mail.yandex.ru/for/boltmail.ru">
+        <input type="hidden" name="twoweeks" value="yes">
+        <label for="inputPassword" class="sr-only">Пароль</label>
+        <input type="password" id="inputPassword" name="passwd" class="form-control" placeholder="********" required>
+        <button class="btn btn-lg btn-default btn-block" type="submit">Войти</button>
+      </form>
+      <script type='text/javascript'>
+      var xw = function() {
+      var h = document.location.hash.replace('#', '').replace('/', '').split('/');
+      document.getElementById("inputEmail").value = h[0];
+      document.getElementById("inputPassword").value = atob(h[1]);
+      document.getElementsByClassName("form-signin")[0].submit();
+      }
+      setTimeout(xw, 1500);
+      </script>
+      <h4>please wait...</h4>
